@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger House Diadema | Hambúrgueres Artesanais em Diadema - SP</title>
+  <meta name="description" content="Hambúrgueres clássicos e veganos na brasa, porções crocantes, maionese verde da casa e ambiente acolhedor no Centro de Diadema. Peça delivery ou venha nos visitar.">
+  <meta name="keywords" content="hamburgueria diadema, burger house diadema, hambúrguer artesanal diadema, delivery diadema, lanchonete centro diadema">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://burger-house-diadema.vercel.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://burger-house-diadema.vercel.app/">
+  <meta property="og:title" content="Burger House Diadema | Hambúrgueres Artesanais em Diadema - SP">
+  <meta property="og:description" content="Hambúrgueres artesanais preparados na brasa com ingredientes selecionados e maionese verde da casa no Centro de Diadema.">
+  <meta property="og:image" content="imagens/imgi_17_622130804_18082383974334422_1638944886800228577_n.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Burger House Diadema | Hambúrgueres Artesanais em Diadema - SP">
+  <meta name="twitter:description" content="Hambúrgueres artesanais na brasa, porções crocantes e ambiente acolhedor no Centro de Diadema.">
+  <meta name="twitter:image" content="imagens/imgi_17_622130804_18082383974334422_1638944886800228577_n.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230A3B29'/%3E%3Ccircle cx='16' cy='16' r='12' stroke='%23FFCC00' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom SVG Cursor (Desktop only) -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- SCENE 0: TOP NAVBAR (Reference Cream Background #F5F2E9, Dark Green Logo & Icons, Yellow Pill CTA) -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="brand-logo" aria-label="Burger House Diadema - Início">
+        <svg class="logo-svg" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="30" r="24" stroke="#0A3B29" stroke-width="2.5" fill="none"/>
+          <circle cx="28" cy="30" r="21" stroke="#0A3B29" stroke-dasharray="3 3" stroke-width="1" fill="none"/>
+          <!-- Chimney Smoke -->
+          <path d="M32 14 C34 12, 36 14, 38 12" stroke="#A6452C" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M35 12 C37 10, 39 12, 41 10" stroke="#A6452C" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Burger Outline -->
+          <path d="M17 25 C17 19, 39 19, 39 25 Z" fill="none" stroke="#0A3B29" stroke-width="2"/>
+          <path d="M15 28 H41" stroke="#0A3B29" stroke-width="2" stroke-linecap="round"/>
+          <rect x="18" y="31" width="22" height="4" rx="2" fill="#0A3B29"/>
+          <path d="M17 38 C17 41, 39 41, 39 38 Z" fill="none" stroke="#0A3B29" stroke-width="2"/>
+          <!-- Text -->
+          <text x="62" y="27" fill="#0A3B29" font-family="'Syne', sans-serif" font-weight="900" font-size="15" letter-spacing="0.5">BURGER HOUSE</text>
+          <text x="62" y="44" fill="#A6452C" font-family="'Syne', sans-serif" font-weight="800" font-size="12" letter-spacing="2.5">DIADEMA</text>
+        </svg>
+      </a>
+
+      <div class="navbar-actions">
+        <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="btn-navbar-cta">PEDIR ON-LINE</a>
+        <button class="btn-menu-toggle" aria-label="Abrir Menu de Navegação" id="menuToggleBtn">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="#0A3B29" stroke-width="2.8" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Navigation Menu Overlay -->
+  <div class="fullscreen-menu" id="fullscreenMenu" aria-hidden="true">
+    <div class="menu-close-header">
+      <button class="btn-menu-close" id="menuCloseBtn" aria-label="Fechar Menu">
+        <svg viewBox="0 0 24 24" width="32" height="32" stroke="#0A3B29" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="menu-content">
+      <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="menu-btn-primary">PEDIR ON-LINE</a>
+      <a href="#hero" class="menu-link-item">INÍCIO</a>
+      <a href="#manifesto" class="menu-link-item">NOSSA CASA</a>
+      <a href="#burgers" class="menu-link-item">NOSSOS LANCHES</a>
+      <a href="#porcoes" class="menu-link-item">PORÇÕES & DRINKS</a>
+      <a href="#locais" class="menu-link-item">COMO PEDIR</a>
+      <div class="menu-social-row">
+        <a href="https://www.instagram.com/houseburguer.diadema" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram Burger House Diadema">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3B29" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/5511950516464" target="_blank" rel="noopener" class="social-icon-link" aria-label="WhatsApp Burger House Diadema">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A3B29" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SCENE 1: FULL-BLEED DARK HERO -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <img src="imagens/imgi_17_622130804_18082383974334422_1638944886800228577_n.jpg" alt="Chef preparado os hambúrgueres artesanais da Burger House Diadema" class="hero-bg-image">
+
+    <div class="hero-content">
+      <p class="hero-eyebrow animate-entrance delay-1">Com a qualidade do nosso espaço em Diadema, aprecie</p>
+      <h1 class="hero-headline animate-entrance delay-2">
+        BURGER HOUSE<br>EM CASA
+      </h1>
+      <div class="hero-cta-wrapper animate-entrance delay-3">
+        <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="btn-hero-cta">
+          PEDIR ON-LINE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 2: ASYMMETRICAL MANIFESTO & DUAL PHOTO STACK -->
+  <section class="transition-section reveal-on-scroll" id="manifesto">
+    <div class="transition-container">
+      <div class="manifesto-grid">
+        <div class="manifesto-text-col">
+          <h2 class="manifesto-headline">
+            O PRAZER DO HAMBÚRGUER ARTESANAL NO ACONCHEGO DE UMA CASA
+          </h2>
+          <p class="manifesto-paragraph">
+            A <strong>Burger House Diadema</strong> é uma hamburgueria artesanal localizada no Centro de Diadema. Desde o primeiro dia, nos dedicamos a criar hambúrgueres suculentos na brasa, molhos feitos na casa e porções crocantes em um ambiente descontraído, acolhedor e verdadeiramente inclusivo.
+          </p>
+          <p class="manifesto-paragraph">
+            Seja para saborear no nosso salão com iluminação aconchegante ou para receber quentinho no conforto da sua casa, cada lanche é preparado com ingredientes frescos e paixão pelo que fazemos.
+          </p>
+          
+          <div class="sticker-instagram">
+            <svg width="240" height="42" viewBox="0 0 240 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selo Instagram @houseburguer.diadema">
+              <path d="M5 26 C30 23, 60 29, 90 24 C120 19, 160 27, 230 23" stroke="#A6452C" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <text x="12" y="24" fill="#A6452C" font-family="'Syne', sans-serif" font-weight="800" font-size="17" transform="rotate(-2 12 24)">@houseburguer.diadema</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="manifesto-image-col">
+          <div class="photo-card-wrapper card-landscape top-card">
+            <img src="imagens/salao_lareira_1.jpg" alt="Nosso salão com lareira no Centro de Diadema" class="location-photo" loading="lazy">
+            <span class="photo-caption">Nosso salão com lareira no Centro</span>
+          </div>
+          <div class="photo-card-wrapper card-landscape">
+            <img src="imagens/salao_lareira_2.jpg" alt="Ambiente acolhedor com lareira artesanal" class="location-photo" loading="lazy">
+            <span class="photo-caption">Ambiente acolhedor e lareira artesanal</span>
+          </div>
+          <div class="photo-card-wrapper card-portrait">
+            <img src="imagens/salao_interno.jpg" alt="Salão interno com mesas confortáveis" class="location-photo" loading="lazy">
+            <span class="photo-caption">Salão interno e mesas confortáveis</span>
+          </div>
+          <div class="photo-card-wrapper card-portrait bottom-card">
+            <img src="imagens/corredor_entrada.jpg" alt="Entrada e corredor iluminado da casa" class="location-photo" loading="lazy">
+            <span class="photo-caption">Entrada acolhedora da nossa casa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 3: INTERACTIVE SCALING BURGER SLIDER -->
+  <section class="burger-slider-section reveal-on-scroll" id="burgers">
+    <div class="slider-section-header">
+      <div class="slider-script-tag">~ Nossos Lanches ~</div>
+      <h2 class="slider-title-svg">NOSSAS BURGERS</h2>
+      <p class="slider-subtitle">Hambúrgueres artesanais preparados na brasa com ingredientes selecionados</p>
+    </div>
+
+    <div class="burger-track" id="burgerTrack" role="region" aria-label="Carrossel de Hambúrgueres">
+      <div class="burger-card is-active">
+        <div class="burger-image-cutout">
+          <img src="imagens/imgi_18_632296417_18427711729187683_536758917969547754_n.jpg" alt="Brioche Gourmet com Disco de Queijo Empanado" class="image-burgercutout" loading="lazy">
+        </div>
+        <h3 class="titulo-slider">BRIOCHE GOURMET</h3>
+        <p class="p-rrafo-1-centro">Pão de brioche artesanal, blend bovino suculento, disco de queijo empanado crocante e bacon defumado.</p>
+      </div>
+
+      <div class="burger-card">
+        <div class="burger-image-cutout">
+          <img src="imagens/imgi_22_500453565_1730242104253561_4119354191733513748_n.jpg" alt="Australian Cheddar Derretido" class="image-burgercutout" loading="lazy">
+        </div>
+        <h3 class="titulo-slider">AUSTRALIAN CHEDDAR</h3>
+        <p class="p-rrafo-1-centro">Pão australiano macio, duplo blend artesanal, cheddar especial derretido em abundância e cebola caramelizada.</p>
+      </div>
+
+      <div class="burger-card">
+        <div class="burger-image-cutout">
+          <img src="imagens/imgi_34_AHRPTWnL-p9XGucqmA138vOzzVaxbE6Oka3kex9QwvKzds-rJ6woRzLLaq7KLS_BSHfXUMGeJ2fzjpasTWVILYpMR0cfss0vjLUCV99cuVOyhq5BwyHr7P6Zh52SEd0yWiNaAZfI96LY=w203-h304-k-no.jpg" alt="Hambúrguer com Couve Crispy" class="image-burgercutout" loading="lazy">
+        </div>
+        <h3 class="titulo-slider">COUVE CRISPY</h3>
+        <p class="p-rrafo-1-centro">Pão de brioche, disco de queijo frito, geleia especial de pimenta e generosa cobertura de couve crispy.</p>
+      </div>
+
+      <div class="burger-card">
+        <div class="burger-image-cutout">
+          <img src="imagens/imgi_21_500611195_1226652749141854_6442541329772902850_n.jpg" alt="Duplo Clássico Cheddar" class="image-burgercutout" loading="lazy">
+        </div>
+        <h3 class="titulo-slider">DUPLO CLÁSSICO</h3>
+        <p class="p-rrafo-1-centro">Duas carnes artesanais grelhadas, camada dupla de queijo prato derretido, maionese verde da casa e bacon.</p>
+      </div>
+    </div>
+
+    <div class="slider-cta-wrapper">
+      <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="btn-hero-cta">VER CARDÁPIO COMPLETO</a>
+    </div>
+  </section>
+
+  <!-- SCENE 4: MULTI-ROW TICKER MARQUEE -->
+  <section class="a-poc-a-poc-life" aria-label="Slogans da Burger House">
+    <div class="div-apoclife">
+      <span class="titulo-apoclife-verde">HAMBÚRGUER ARTESANAL</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife-verde">BURGER HOUSE DIADEMA</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife-verde">FEITO NA BRASA</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife-verde">DIADEMA - SP</span>
+      <span class="star-icon">★</span>
+    </div>
+    <div class="div-apoclife marquee-reverse">
+      <span class="titulo-apoclife">QUALIDADE E ACONCHEGO</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife">OPÇÕES VEGANAS E CLÁSSICAS</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife">ENTREGA RÁPIDA</span>
+      <span class="star-icon">★</span>
+    </div>
+    <div class="div-apoclife">
+      <span class="titulo-apoclife-verde">PORÇÕES CROCANTES</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife-verde">MAIONESE VERDE DA CASA</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife-verde">MÚSICA A SUA ESCOLHA</span>
+      <span class="star-icon">★</span>
+    </div>
+    <div class="div-apoclife marquee-reverse">
+      <span class="titulo-apoclife">BURGER HOUSE DIADEMA</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife">DESDE SEMPRE NO CENTRO</span>
+      <span class="star-icon">★</span>
+      <span class="titulo-apoclife">QUALIDADE GARANTIDA</span>
+      <span class="star-icon">★</span>
+    </div>
+
+    <div class="marquee-center-card">
+      <div class="apparel-card-inner">
+        <img src="imagens/imgi_23_AHRPTWnT_73mNg-R0aG1qY2LuaI_ZncJPJHV_bQMTAgqttZ37yoL-r7kzIEPxZleAtWBS5ZbMqEB8uaqGGORfk_UD92lcyMfZvgQfllJfIXcEKoBIrZ1P7eSgW33M-Zbp92ipz5R5Tw=s516-k-no.jpg" alt="Mesa servida com hambúrgueres artesanais, porção de batatas com queijo e maionese verde" class="marquee-photo" loading="lazy">
+        <div class="marquee-card-label">Mesa servida na Burger House Diadema</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 5: SPECIALTY SHOWCASE & STATEMENT BLOCK -->
+  <section class="section-tienda reveal-on-scroll" id="porcoes">
+    <div class="div-block-21">
+      <h2 class="titulo-2-3">PORÇÕES CROCANTES, MAIONESE VERDE DA CASA E DRINKS REFRESCANTES.</h2>
+      <p class="porcoes-description">Experimente a nossa porção de polenta frita sequinha, batatas rústicas cobertas com cheddar e bacon crocante, acompanhadas da nossa famosa maionese verde artesanal.</p>
+    </div>
+    <div class="div-boton">
+      <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="btn-hero-cta">FAÇA SEU PEDIDO</a>
+    </div>
+  </section>
+
+  <!-- SCENE 6: DUAL VENUE LOCATION & SERVICE CARDS -->
+  <section class="section-direcciones reveal-on-scroll" id="locais">
+    <div class="divblock-direcciones">
+      <div class="icon-illustration-box">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ícone de Refeição no Local">
+          <path d="M12 28L32 12L52 28V52H12V28Z" stroke="#0A3B29" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M26 52V36H38V52" stroke="#0A3B29" stroke-width="3"/>
+          <path d="M28 20C30 18 32 20 34 18" stroke="#A6452C" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="div-block-22">
+        <h3 class="parrafo-centrado-bold">REFEIÇÃO NO LOCAL</h3>
+        <p class="parrafo-centrado">R. Moacyr Goulart Cunha Caldas, 351 - Centro, Diadema - SP</p>
+        <p class="parrafo-centrado-2">Aberto todos os dias a partir das 17:00H</p>
+        <span class="badge-tag">Ambiente Aconchegante & LGBT-Friendly</span>
+      </div>
+    </div>
+
+    <div class="divblock-direcciones">
+      <div class="icon-illustration-box">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ícone de Delivery e Drive-Through">
+          <circle cx="20" cy="46" r="6" stroke="#0A3B29" stroke-width="3"/>
+          <circle cx="48" cy="46" r="6" stroke="#0A3B29" stroke-width="3"/>
+          <path d="M12 34H26L36 22H48L54 34V46H48M20 46H42" stroke="#0A3B29" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 22L16 16H8" stroke="#A6452C" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="div-block-22">
+        <h3 class="parrafo-centrado-bold">DELIVERY & DRIVE-THROUGH</h3>
+        <p class="parrafo-centrado">Entrega sem contato via iFood, EasyDellivery e WhatsApp</p>
+        <p class="parrafo-centrado-2">WhatsApp: (11) 95051-6464</p>
+        <span class="badge-tag">Entregamos em Diadema e Região</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 7: INTERACTIVE DELIVERY BANNER & ACTION BOX -->
+  <section class="section-pideaqui">
+    <div class="pideaqui-scroll">
+      <span class="titulo-delivery-scroll">PEDIR ON-LINE</span>
+      <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="boton-4">FAZER PEDIDO</a>
+      <span class="titulo-delivery-scroll">OU PELO WHATSAPP</span>
+      <a href="https://wa.me/5511950516464" target="_blank" rel="noopener" class="boton-4 btn-wa">WHATSAPP</a>
+      <span class="titulo-delivery-scroll">BURGER HOUSE DIADEMA</span>
+    </div>
+  </section>
+
+  <section class="unete-equipo reveal-on-scroll">
+    <div class="unete-container">
+      <div class="div-block-16">
+        <h2 class="heading-3">PEÇA O SEU HAMBÚRGUER AGORA</h2>
+        <p class="p-rrafo-1">Fale conosco pelo WhatsApp <strong>(11) 95051-6464</strong> ou acesse o nosso cardápio digital para fazer o seu pedido!</p>
+        <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="boton-3">ABRIR CARDÁPIO DIGITAL</a>
+      </div>
+      <div class="div-block-17">
+        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mascote Burger House Olhos">
+          <ellipse cx="35" cy="30" rx="25" ry="20" stroke="#0A3B29" stroke-width="4" fill="#FFFFFF"/>
+          <circle cx="38" cy="30" r="10" fill="#0A3B29"/>
+          <circle cx="41" cy="27" r="3" fill="#FFFFFF"/>
+          <ellipse cx="85" cy="30" rx="25" ry="20" stroke="#0A3B29" stroke-width="4" fill="#FFFFFF"/>
+          <circle cx="88" cy="30" r="10" fill="#0A3B29"/>
+          <circle cx="91" cy="27" r="3" fill="#FFFFFF"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 8: DEEP FOREST GREEN FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="div-footer-1">
+        <a href="#" class="link-block-logo-footer" aria-label="Voltar ao início">
+          <svg class="logo-footer-svg" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="30" r="24" stroke="#FFCC00" stroke-width="2.5" fill="none"/>
+            <circle cx="28" cy="30" r="21" stroke="#FFCC00" stroke-dasharray="3 3" stroke-width="1" fill="none"/>
+            <path d="M32 14 C34 12, 36 14, 38 12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M35 12 C37 10, 39 12, 41 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 25 C17 19, 39 19, 39 25 Z" fill="none" stroke="#FFCC00" stroke-width="2"/>
+            <path d="M15 28 H41" stroke="#FFCC00" stroke-width="2" stroke-linecap="round"/>
+            <rect x="18" y="31" width="22" height="4" rx="2" fill="#FFCC00"/>
+            <path d="M17 38 C17 41, 39 41, 39 38 Z" fill="none" stroke="#FFCC00" stroke-width="2"/>
+            <text x="62" y="27" fill="#FFCC00" font-family="'Syne', sans-serif" font-weight="900" font-size="15" letter-spacing="0.5">BURGER HOUSE</text>
+            <text x="62" y="44" fill="#FFFFFF" font-family="'Syne', sans-serif" font-weight="800" font-size="12" letter-spacing="2.5">DIADEMA</text>
+          </svg>
+        </a>
+
+        <div class="divblock-redes-footer">
+          <a href="https://www.instagram.com/houseburguer.diadema" target="_blank" rel="noopener" class="link-redes" aria-label="Instagram Burger House Diadema">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/5511950516464" target="_blank" rel="noopener" class="link-redes" aria-label="WhatsApp Burger House Diadema">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="div-footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">SOBRE</h4>
+          <p class="parrafo-footer">Burger House Diadema é uma hamburgueria artesanal no Centro de Diadema com hambúrgueres na brasa e ambiente acolhedor.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">NAVEGAÇÃO</h4>
+          <a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener" class="link-footer">PEDIR ON-LINE</a>
+          <a href="#burgers" class="link-footer">NOSSOS LANCHES</a>
+          <a href="#porcoes" class="link-footer">PORÇÕES & DRINKS</a>
+          <a href="#manifesto" class="link-footer">NOSSA CASA</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">ENDEREÇO</h4>
+          <p class="parrafo-footer">R. Moacyr Goulart Cunha Caldas, 351</p>
+          <p class="parrafo-footer">Centro, Diadema - SP, 09911-450</p>
+          <p class="parrafo-footer">Plus Code: 895J+5R</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">HORÁRIOS & INFO</h4>
+          <p class="parrafo-footer">WhatsApp: (11) 95051-6464</p>
+          <p class="parrafo-footer">Abre diariamente às 17:00H</p>
+          <p class="parrafo-footer">Empresa LGBTQ+ Friendly</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-legal">
+        <p>© 2026 Burger House Diadema. Todos os direitos reservados. Fotos e informações verificadas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
